@@ -373,6 +373,7 @@
             this.btnPesquisarCep.TabIndex = 34;
             this.btnPesquisarCep.Text = "Pesquisar";
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // label17
             // 

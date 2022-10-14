@@ -13,6 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -81,6 +82,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Controller\AppModelo.Controller\AppModelo.Controller.csproj">
+      <Project>{E0F5E757-4EA5-4D0C-851C-2BF9F9B99809}</Project>
+      <Name>AppModelo.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\AppModelo.Model.Domain\AppModelo.Model.Domain.csproj">
+      <Project>{08D4F9B4-32F3-45FA-A44D-CE525C09B84A}</Project>
+      <Name>AppModelo.Model.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\AppModelo.Model.Infra\AppModelo.Model.Infra.csproj">
+      <Project>{b88f7fc5-d156-41cf-af62-908a1698fdc1}</Project>
+      <Name>AppModelo.Model.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
