@@ -1,4 +1,5 @@
 ﻿using AppModelo.Controller.External;
+using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,52 @@ namespace AppModelo.View.Windows.Cadastros
             txtEnderecoBairro.Text = endereco.Bairro;
             txtEnderecoLogradouro.Text = endereco.Logradouro;
             txtEnderecoMunicipio.Text = endereco.Localidade;
+            txtEnderecoUf.Text = endereco.Uf;
+        }
+
+        private void txtNome_Validating(object sender, CancelEventArgs e)
+        {
+            if(txtNome.Text.Length < 6) 
+            {
+                errorProvider.SetError(txtNome, "Digite seu nome completo");
+                return;
+            }
+            
+            foreach(var letra in txtNome.Text)
+            {
+                if(char.IsNumber(letra))
+                {
+                    errorProvider.SetError(txtNome, "Seu nome parece estar incorreto");
+                    return ;
+                }
+            }
+            errorProvider.Clear();
+        }
+
+        private void txtCpf_Validating(object sender, CancelEventArgs e)
+        {
+            var cpf = txtCpf.Text;
+            var cpfEhValido = Validadores.ValidarCPF(cpf);
+            
+            if (cpfEhValido is false)
+            {
+                errorProvider.SetError(txtCpf, "CPF Invalido");
+                return;
+            }
+            errorProvider.Clear();
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            var email = txtEmail.Text;
+            var EmailEhValido = Validadores.EmailEValido(email);
+            
+            if (EmailEhValido is false)
+            {
+                errorProvider.SetError(txtEmail, "Email Invalido");
+                return;
+            }
+            errorProvider.Clear();
         }
     }
 }
