@@ -54,11 +54,20 @@
     <Compile Include="Cadastros\frmCadastroFuncionario.Designer.cs">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\frmNascionalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\frmNascionalidades.Designer.cs">
+      <DependentUpon>frmNascionalidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\FormatarCamposObrigatorios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cadastros\frmCadastroFuncionario.resx">
       <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\frmNascionalidades.resx">
+      <DependentUpon>frmNascionalidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

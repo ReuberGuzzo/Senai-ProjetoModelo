@@ -83,8 +83,7 @@ namespace AppModelo.View.Windows.Cadastros
         private void txtDataNascimento_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             var dataNascimento = DateTime.Parse(txtDataNascimento.Text);
-            
-            if(dataNascimento < )
+
         }
     }
 }
