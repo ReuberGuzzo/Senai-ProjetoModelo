@@ -2,6 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
     <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC</SSDTPath>
@@ -18,7 +19,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AppModelo.Model.Infra</RootNamespace>
     <AssemblyName>AppModelo.Model.Infra</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <LangVersion>latest</LangVersion>
@@ -102,12 +103,6 @@
     <Compile Include="Services\ViaCepService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppModelo.Model.Domain\AppModelo.Model.Domain.csproj">
-      <Project>{08D4F9B4-32F3-45FA-A44D-CE525C09B84A}</Project>
-      <Name>AppModelo.Model.Domain</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -125,7 +120,12 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AppModelo.Model.Domain\AppModelo.Model.Domain.csproj">
+      <Project>{08d4f9b4-32f3-45fa-a44d-ce525c09b84a}</Project>
+      <Name>AppModelo.Model.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="_Sql\create_table_nacionalidades.sql" />
   </ItemGroup>

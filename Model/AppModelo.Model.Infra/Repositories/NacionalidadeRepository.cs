@@ -1,12 +1,8 @@
 ﻿using AppModelo.Model.Domain.Entities;
 using Dapper;
 using MySql.Data.MySqlClient;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Repositories
 {
@@ -31,7 +27,7 @@ namespace AppModelo.Model.Infra.Repositories
         }
         public IEnumerable<NacionalidadeEntity> ObterTodos()
         {
-            var sql = "SELECT *From nacionalidades";
+            var sql = "SELECT id, descricao From nacionalidade ORDER BY  descricao ASC";
            
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 
