@@ -1,13 +1,8 @@
 ﻿using AppModelo.Model.Domain.Wrappers;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace AppModelo.Model.Infra.Services
 {
@@ -15,7 +10,7 @@ namespace AppModelo.Model.Infra.Services
     {
         public ViaCepWrapper ObterDaApi(string cep)
         {
-            //Como o metodo precisa retornar um ViaCepWrapper, é criada um instancia vazia para retornar ela caso dê erro.
+            //Como o metodo precisa retornar um ViaCepWrapper, é criada uma instancia vazia para retornar ela caso dê erro.
             var cepWrapper = new ViaCepWrapper();
 
             //Instancia HTTP que permite obter informações da Internet através de uma URL

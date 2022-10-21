@@ -10,6 +10,5 @@ namespace AppModelo.Model.Domain.Wrappers
     {
         public string Erro { get; set; }
         public bool Sucesso { get; set; }
-
     }
 }

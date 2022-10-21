@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0F5E757-4EA5-4D0C-851C-2BF9F9B99809}</ProjectGuid>
+    <ProjectGuid>{A99545F0-2818-44CE-8869-77A3DC5650D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AppModelo.Controller</RootNamespace>
@@ -42,18 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastros\NascionalidadeController.cs" />
+    <Compile Include="Cadastros\NacionalidadeController.cs" />
+    <Compile Include="Cadastros\NaturalidadeController.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="External\ViaCepController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Model\AppModelo.Model.Domain\AppModelo.Model.Domain.csproj">
-      <Project>{08d4f9b4-32f3-45fa-a44d-ce525c09b84a}</Project>
+      <Project>{CABD4FF9-61F6-452B-915E-DB9F5465FC90}</Project>
       <Name>AppModelo.Model.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Model\AppModelo.Model.Infra\AppModelo.Model.Infra.csproj">
-      <Project>{B88F7FC5-D156-41CF-AF62-908A1698FDC1}</Project>
+      <Project>{D723694E-BF48-45FC-8B3B-0DC158909AF4}</Project>
       <Name>AppModelo.Model.Infra</Name>
     </ProjectReference>
   </ItemGroup>
