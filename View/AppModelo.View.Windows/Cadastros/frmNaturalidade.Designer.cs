@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.gvNaturalidades = new System.Windows.Forms.DataGridView();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtDescricao = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -48,13 +51,6 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Location = new System.Drawing.Point(16, 94);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(141, 20);
-            this.txtDescricao.TabIndex = 9;
             // 
             // txtId
             // 
@@ -109,22 +105,35 @@
             this.gvNaturalidades.Size = new System.Drawing.Size(240, 150);
             this.gvNaturalidades.TabIndex = 14;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Location = new System.Drawing.Point(16, 95);
+            this.txtDescricao.Mask = "?";
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(136, 20);
+            this.txtDescricao.TabIndex = 15;
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 190);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.gvNaturalidades);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmNaturalidade";
             this.Text = "frmNaturalidade";
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,12 +142,13 @@
         #endregion
 
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.DataGridView gvNaturalidades;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.MaskedTextBox txtDescricao;
     }
 }
