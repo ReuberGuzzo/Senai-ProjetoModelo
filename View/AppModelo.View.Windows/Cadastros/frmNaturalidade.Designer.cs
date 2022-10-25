@@ -37,8 +37,7 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.gvNaturalidades = new System.Windows.Forms.DataGridView();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtDescricao = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -112,25 +111,16 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(16, 95);
-            this.txtDescricao.Mask = "?";
+            this.txtDescricao.Location = new System.Drawing.Point(12, 95);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(136, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(152, 20);
             this.txtDescricao.TabIndex = 15;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(111, 114);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(13, 20);
-            this.maskedTextBox1.TabIndex = 16;
             // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 190);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.gvNaturalidades);
             this.Controls.Add(this.chkAtivo);
@@ -158,7 +148,6 @@
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.DataGridView gvNaturalidades;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.MaskedTextBox txtDescricao;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox txtDescricao;
     }
 }

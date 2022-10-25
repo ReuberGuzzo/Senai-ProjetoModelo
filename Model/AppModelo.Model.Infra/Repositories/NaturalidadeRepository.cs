@@ -40,9 +40,27 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado;
         }
+        public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
+        {
+            var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao DESC WHERE ativo = true";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.Query<NaturalidadeEntity>(sql);
+
+            return resultado;
+        }
         public NaturalidadeEntity ObterPorId()
         {
             return new NaturalidadeEntity();
         }
+        public NacionalidadeEntity ObterPorDescricao(String descricao)
+        {
+            var sql = $"Select id,descricao FROM naturalidade WHERE descricao = '{descricao}'";
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+            var resultado = conexaoBd.QuerySingleOrDefault<NacionalidadeEntity> (sql);
+            return resultado;
+        }
+        
     }
 }
