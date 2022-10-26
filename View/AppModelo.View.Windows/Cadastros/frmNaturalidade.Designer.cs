@@ -44,7 +44,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 144);
+            this.btnSalvar.Location = new System.Drawing.Point(316, 57);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(100, 29);
             this.btnSalvar.TabIndex = 11;
@@ -54,7 +54,8 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(16, 52);
+            this.txtId.BackColor = System.Drawing.Color.White;
+            this.txtId.Location = new System.Drawing.Point(12, 62);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(55, 20);
             this.txtId.TabIndex = 8;
@@ -62,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 78);
+            this.label2.Location = new System.Drawing.Point(80, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 7;
@@ -71,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 35);
+            this.label1.Location = new System.Drawing.Point(9, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 6;
@@ -84,13 +85,15 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 30);
+            this.panel1.Size = new System.Drawing.Size(423, 30);
             this.panel1.TabIndex = 12;
             // 
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(16, 121);
+            this.chkAtivo.Checked = true;
+            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkAtivo.Location = new System.Drawing.Point(260, 64);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 13;
@@ -99,10 +102,11 @@
             // 
             // gvNaturalidades
             // 
+            this.gvNaturalidades.BackgroundColor = System.Drawing.Color.LightGray;
             this.gvNaturalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNaturalidades.Location = new System.Drawing.Point(194, 38);
+            this.gvNaturalidades.Location = new System.Drawing.Point(12, 99);
             this.gvNaturalidades.Name = "gvNaturalidades";
-            this.gvNaturalidades.Size = new System.Drawing.Size(240, 150);
+            this.gvNaturalidades.Size = new System.Drawing.Size(404, 166);
             this.gvNaturalidades.TabIndex = 14;
             // 
             // errorProvider
@@ -111,7 +115,7 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(12, 95);
+            this.txtDescricao.Location = new System.Drawing.Point(83, 62);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(152, 20);
             this.txtDescricao.TabIndex = 15;
@@ -120,7 +124,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 190);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(423, 273);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.gvNaturalidades);
             this.Controls.Add(this.chkAtivo);

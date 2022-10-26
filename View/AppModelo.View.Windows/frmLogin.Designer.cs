@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.txtEsqueciSenha = new System.Windows.Forms.Label();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.lblSuporteContato = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -53,6 +56,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(210, 20);
             this.txtEmail.TabIndex = 1;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label2
             // 
@@ -102,6 +106,10 @@
             this.lblSuporteContato.TabIndex = 6;
             this.lblSuporteContato.Text = "Suporte e Contato";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +124,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +139,6 @@
         private System.Windows.Forms.Label txtEsqueciSenha;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label lblSuporteContato;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

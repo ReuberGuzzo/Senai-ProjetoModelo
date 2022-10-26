@@ -19,17 +19,20 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            var salvou = _naturalidadeController.Cadastrar(txtDescricao.Text);
-            if (salvou)
+            var temNumero = Helpers.Componentes.ExisteNumeroNoTexto(txtDescricao.Text);
+            if (temNumero)
             {
-                MessageBox.Show("Nacionalidade incluída com sucesso");
-                txtDescricao.Text = string.Empty;
+                errorProvider.SetError(txtDescricao, "Naturalidade não tem Número");
+                txtDescricao.Focus();
+                return;
             }
-            else
-            {
-                MessageBox.Show("Houve um erro ao salvar no banco de dados");
 
-            }
+            var controller = new NaturalidadeController();
+            var descricaoMaiuscula = txtDescricao.Text.ToUpper();
+
+            var resposta = controller.Cadastrar(descricaoMaiuscula, chkAtivo.Checked);
+
+           
         }
 
         private void txtDescricao_Validating(object sender, System.ComponentModel.CancelEventArgs e)

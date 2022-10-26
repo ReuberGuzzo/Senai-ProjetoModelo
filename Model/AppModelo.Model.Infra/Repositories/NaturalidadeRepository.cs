@@ -14,10 +14,11 @@ namespace AppModelo.Model.Infra.Repositories
     {
         //CRUD - create - read   - update - delete
         //       insert - select - update - delete  
-        public bool Inserir(string descricao)
+        public bool Inserir(string descricao, bool ativo)
         {
             //string interpolation
-            var sql = $"INSERT INTO naturalidade (descricao) VALUES ('{descricao}')";
+            var agora = DateTime.Now.ToString("u");
+            var sql = $"INSERT INTO naturalidade (descricao, dataCriacao, dataAlteracao, ativo) VALUES ('{descricao}','{agora}','{agora}', {ativo})";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
