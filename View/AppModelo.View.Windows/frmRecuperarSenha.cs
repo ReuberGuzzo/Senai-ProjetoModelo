@@ -1,4 +1,5 @@
-﻿using AppModelo.View.Windows.Cadastros;
+﻿using AppModelo.Model.Domain.Validators;
+using AppModelo.View.Windows.Cadastros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,15 @@ namespace AppModelo.View.Windows
 
         private void btnRecuperarAcesso_Click(object sender, EventArgs e)
         {
-            var form = new frmPrincipal();
+            var Email = txtEmail.Text;
+            var emailEhValido = Validadores.EmailEValido(Email);
+            if (emailEhValido is false)
+            {
+                errorProvider1.SetError(txtEmail, "Email Inválido");
+                txtEmail.Focus();
+                return;
+            }
+                var form = new frmPrincipal();
             form.Show();
             this.Close();
         }

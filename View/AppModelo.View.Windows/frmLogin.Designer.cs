@@ -72,6 +72,7 @@
             // 
             this.txtSenha.Location = new System.Drawing.Point(12, 96);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(210, 20);
             this.txtSenha.TabIndex = 3;
             // 
@@ -123,7 +124,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
