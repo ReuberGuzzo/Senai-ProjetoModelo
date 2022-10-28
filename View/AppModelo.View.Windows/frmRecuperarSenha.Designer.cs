@@ -57,9 +57,9 @@
             // 
             // btnRecuperarAcesso
             // 
-            this.btnRecuperarAcesso.Location = new System.Drawing.Point(38, 79);
+            this.btnRecuperarAcesso.Location = new System.Drawing.Point(13, 79);
             this.btnRecuperarAcesso.Name = "btnRecuperarAcesso";
-            this.btnRecuperarAcesso.Size = new System.Drawing.Size(166, 28);
+            this.btnRecuperarAcesso.Size = new System.Drawing.Size(225, 28);
             this.btnRecuperarAcesso.TabIndex = 2;
             this.btnRecuperarAcesso.Text = "Recuperar Acesso";
             this.btnRecuperarAcesso.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(38, 113);
+            this.btnCancelar.Location = new System.Drawing.Point(13, 113);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(166, 26);
+            this.btnCancelar.Size = new System.Drawing.Size(225, 26);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -92,6 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(250, 155);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);

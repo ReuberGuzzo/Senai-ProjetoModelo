@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Repositories
 {
+    //Esta classe realiza Login e recuperação de senha - Busca no banco de dados os "dados" para realizar o procedimento
     public class UsuarioRepository
     {
         public UsuarioEntity Obter(string usuario, string senha)
@@ -22,5 +23,33 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado;
         }
+
+        
+        public UsuarioEntity ObterPorEmail(string email)
+        {
+            var sql = $"SELECT email, nome FROM usuarios WHERE email = '{email}'";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.QuerySingleOrDefault<UsuarioEntity>(sql);
+
+            return resultado;
+
+        }
+
+
+        public bool AtualizarSenha(string email, string novaSenha)
+        {
+            var sql = $"UPDATE usuarios SET senha = '{novaSenha}' WHERE email = '{email}';";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.Execute(sql);
+
+            return resultado > 0;
+        }
+
     }
+
+
 }

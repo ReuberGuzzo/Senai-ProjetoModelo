@@ -1,4 +1,5 @@
-﻿using AppModelo.Model.Domain.Validators;
+﻿using AppModelo.Controller.Seguranca;
+using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Cadastros;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,12 @@ namespace AppModelo.View.Windows
                 txtEmail.Focus();
                 return;
             }
-                var form = new frmPrincipal();
+
+            var controller = new UsuarioController();
+            var resultado = controller.RecuperarSenha(txtEmail.Text);
+            MessageBox.Show(resultado);
+
+            var form = new frmPrincipal();
             form.Show();
             this.Close();
         }
