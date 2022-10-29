@@ -75,5 +75,14 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
+       
+
+
+
+        // Gravar Funcionarios no Banco de dados.
+        private void btnSalvarCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

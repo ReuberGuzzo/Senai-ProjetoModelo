@@ -69,6 +69,7 @@
             this.txtEnderecoCep = new System.Windows.Forms.MaskedTextBox();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnSalvarCadastro = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +82,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 88);
+            this.panel1.Size = new System.Drawing.Size(779, 88);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -150,7 +151,7 @@
             // txtCpf
             // 
             this.txtCpf.Location = new System.Drawing.Point(625, 133);
-            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Mask = "000,000,000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(130, 27);
             this.txtCpf.TabIndex = 8;
@@ -425,12 +426,25 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // btnSalvarCadastro
+            // 
+            this.btnSalvarCadastro.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSalvarCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalvarCadastro.Location = new System.Drawing.Point(266, 520);
+            this.btnSalvarCadastro.Name = "btnSalvarCadastro";
+            this.btnSalvarCadastro.Size = new System.Drawing.Size(205, 42);
+            this.btnSalvarCadastro.TabIndex = 39;
+            this.btnSalvarCadastro.Text = "SALVAR CADASTRO";
+            this.btnSalvarCadastro.UseVisualStyleBackColor = false;
+            this.btnSalvarCadastro.Click += new System.EventHandler(this.btnSalvarCadastro_Click);
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(774, 523);
+            this.ClientSize = new System.Drawing.Size(779, 574);
+            this.Controls.Add(this.btnSalvarCadastro);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtEnderecoCep);
             this.Controls.Add(this.txtTelefoneContato);
@@ -524,5 +538,6 @@
         private System.Windows.Forms.MaskedTextBox txtEnderecoCep;
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Button btnSalvarCadastro;
     }
 }
