@@ -40,6 +40,9 @@ namespace AppModelo.View.Windows.Cadastros
             txtEnderecoUf.Text = endereco.Uf;
         }
 
+        
+
+
         private void txtNome_Validating(object sender, CancelEventArgs e)
         {
             //primeira regra nome < que 6 letras
@@ -82,7 +85,12 @@ namespace AppModelo.View.Windows.Cadastros
         // Gravar Funcionarios no Banco de dados.
         private void btnSalvarCadastro_Click(object sender, EventArgs e)
         {
-
+            var funController = new FuncionarioController();
+            var dataNasc = Convert.ToDateTime(txtDataNascimento.Text);
+            int numero = int.Parse(txtEnderecoNumero.Text);
+            //Recebo os dados do metodo obter para o endereço
+            var salvou = funController.SalvarCadastro(txtNome.Text,dataNasc, rbMasculino.Checked,txtCpf.Text, 1, 1, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text,numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+                       
         }
     }
 }

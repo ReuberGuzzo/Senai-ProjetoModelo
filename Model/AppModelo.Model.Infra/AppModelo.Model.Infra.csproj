@@ -105,6 +105,7 @@
     <Compile Include="Repositories\UsuarioRepository.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Services\ViaCepService.cs" />
+    <Content Include="_Sql\create_table_funcionario.sql" />
     <Content Include="_Sql\create_table_naturalidades.sql" />
   </ItemGroup>
   <ItemGroup>

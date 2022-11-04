@@ -161,7 +161,7 @@
             // txtDataNascimento
             // 
             this.txtDataNascimento.Location = new System.Drawing.Point(344, 133);
-            this.txtDataNascimento.Mask = "00/00/0000";
+            this.txtDataNascimento.Mask = "0000/00/00";
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(127, 27);
             this.txtDataNascimento.TabIndex = 9;
@@ -323,6 +323,7 @@
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Checked = true;
             this.rbMasculino.Location = new System.Drawing.Point(506, 151);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(94, 24);
@@ -338,7 +339,6 @@
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(87, 24);
             this.rbFeminino.TabIndex = 29;
-            this.rbFeminino.TabStop = true;
             this.rbFeminino.Text = "Feminino";
             this.rbFeminino.UseVisualStyleBackColor = true;
             // 
