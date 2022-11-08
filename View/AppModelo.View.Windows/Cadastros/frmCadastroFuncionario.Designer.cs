@@ -359,6 +359,7 @@
             this.cmbNacionalidade.Size = new System.Drawing.Size(156, 28);
             this.cmbNacionalidade.TabIndex = 31;
             this.cmbNacionalidade.Tag = "Obrigatorio";
+            this.cmbNacionalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNacionalidade_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -385,6 +386,7 @@
             this.cmbNaturalidade.Name = "cmbNaturalidade";
             this.cmbNaturalidade.Size = new System.Drawing.Size(130, 28);
             this.cmbNaturalidade.TabIndex = 33;
+            this.cmbNaturalidade.SelectedIndexChanged += new System.EventHandler(this.cmbNaturalidade_SelectedIndexChanged);
             // 
             // txtTelefoneContato
             // 

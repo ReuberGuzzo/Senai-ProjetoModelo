@@ -88,12 +88,50 @@ namespace AppModelo.View.Windows.Cadastros
             var funController = new FuncionarioController();
             var dataNasc = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
-            //var naturalidade = Convert.ToString(cmbNaturalidade.Text);
-           // var nacionalidade = Convert.ToInt32(cmbNacionalidade.Text);
+            var naturalidade = cmbNaturalidade.SelectedIndex +1;
+            var nacionalidade = cmbNacionalidade.SelectedIndex;
 
             //Recebo os dados do metodo obter para o endereço
             var salvou = funController.SalvarCadastro(txtNome.Text,dataNasc, rbMasculino.Checked,txtCpf.Text, nacionalidade, naturalidade, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text,numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
-                       
+            MessageBox.Show("Salvo com Sucesso!");
+           LimparForm();
+        }
+
+        public void cmbNacionalidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var obterNacionalidade = cmbNacionalidade.SelectedIndex;
+            string Index = cmbNacionalidade.Text;
+            
+        }
+
+        public void cmbNaturalidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var obterNaturalidade = cmbNaturalidade.SelectedIndex;
+            string Index = cmbNaturalidade.Text;
+            
+        }
+
+        private void LimparForm()
+        {
+            foreach (Control controle in this.Controls)
+            {
+                switch (controle)
+                {
+                    case TextBox:
+                        ((TextBox)controle).Clear();
+                        break;
+
+                    case Label:
+                        ((Label)controle).Text = "";
+                        break;
+
+                    case ComboBox:
+                        ((ComboBox)controle).SelectedIndex = 0;
+                        break;
+                }
+            }
+
         }
     }
 }
+
