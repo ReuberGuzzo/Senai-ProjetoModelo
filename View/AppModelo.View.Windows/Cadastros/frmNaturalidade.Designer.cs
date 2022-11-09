@@ -38,17 +38,19 @@
             this.gvNaturalidades = new System.Windows.Forms.DataGridView();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(316, 57);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 272);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(100, 29);
+            this.btnSalvar.Size = new System.Drawing.Size(123, 38);
             this.btnSalvar.TabIndex = 11;
-            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Text = "Inserir";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -120,12 +122,32 @@
             this.txtDescricao.Size = new System.Drawing.Size(152, 20);
             this.txtDescricao.TabIndex = 15;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(293, 271);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 38);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Excluir";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(152, 271);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 38);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Atualizar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // frmNaturalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(423, 273);
+            this.ClientSize = new System.Drawing.Size(423, 313);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.gvNaturalidades);
             this.Controls.Add(this.chkAtivo);
@@ -154,5 +176,7 @@
         private System.Windows.Forms.DataGridView gvNaturalidades;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

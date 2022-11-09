@@ -89,7 +89,7 @@ namespace AppModelo.View.Windows.Cadastros
             var dataNasc = Convert.ToDateTime(txtDataNascimento.Text);
             int numero = int.Parse(txtEnderecoNumero.Text);
             var naturalidade = cmbNaturalidade.SelectedIndex +1;
-            var nacionalidade = cmbNacionalidade.SelectedIndex;
+            var nacionalidade = cmbNacionalidade.SelectedIndex +1;
 
             //Recebo os dados do metodo obter para o endereço
             var salvou = funController.SalvarCadastro(txtNome.Text,dataNasc, rbMasculino.Checked,txtCpf.Text, nacionalidade, naturalidade, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text,numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
@@ -121,8 +121,8 @@ namespace AppModelo.View.Windows.Cadastros
                         ((TextBox)controle).Clear();
                         break;
 
-                    case Label:
-                        ((Label)controle).Text = "";
+                    case MaskedTextBox:
+                        ((MaskedTextBox)controle).Text = "";
                         break;
 
                     case ComboBox:

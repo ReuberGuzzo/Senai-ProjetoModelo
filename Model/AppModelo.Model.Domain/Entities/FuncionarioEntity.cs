@@ -10,7 +10,7 @@ namespace AppModelo.Model.Domain.Entities
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string data_de_nascimento { get; set; }
+        public string dataDeNascimento { get; set; }
         public bool Sexo { get; set; }
         public string cpf { get; set; }
         public int id_nacionalidade { get; set; }
