@@ -18,9 +18,18 @@ namespace AppModelo.Controller.Cadastros
             return resposta;
         }
 
-        public object Cadastrar(string text)
+        public bool CadastrarAtualizacao(string descricao, int id)
         {
-            throw new NotImplementedException();
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Atualizar(descricao, id);
+            return resposta;
+        }
+
+        public bool ExcluirNaturalidade(int Id)
+        {
+            var repositorio = new NaturalidadeRepository();
+            var resposta = repositorio.Remover(Id);
+            return resposta;
         }
 
         public List<NaturalidadeEntity> ObterTodasNaturalidades()

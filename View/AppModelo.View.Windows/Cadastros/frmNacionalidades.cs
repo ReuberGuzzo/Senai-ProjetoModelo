@@ -17,15 +17,45 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            var salvou = _nacionalidadeController.Cadastrar(txtDescricao.Text);
-            if (salvou)
+            var temNumero = Helpers.Componentes.ExisteNumeroNoTexto(txtDescricao.Text);
+            if (temNumero)
             {
-                MessageBox.Show("Nacionalidade incluída com sucesso");
-                txtDescricao.Text = string.Empty;
+                errorProvider.SetError(txtDescricao, "Nacionalidade não tem Número");
+                txtDescricao.Focus();
+                return;
+            }
+
+            var controller = new NacionalidadeController();
+            var descricaoMaiuscula = txtDescricao.Text.ToUpper();
+
+            var resposta = controller.Cadastrar(descricaoMaiuscula, chkAtivo.Checked);
+
+            MessageBox.Show("Naturalidade cadastrada com Sucesso");
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
+            gvNacionalidades.DataSource = listaDeNacionalidades;
+
+            MessageBox.Show("Nacionalidades Atualizadas com Sucesso");
+            
+            
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            var converter = int.Parse(txtId.Text);
+
+            var removeu = _nacionalidadeController.ExcluirNacionalidade (converter);
+            if (removeu)
+            {
+                MessageBox.Show("Nacionalidade excluída com sucesso");
+                txtId.Text = string.Empty;
             }
             else
             {
-                MessageBox.Show("Houve um erro ao salvar no banco de dados");
+                MessageBox.Show("Verifique se digitou o nome conforme descrito na lista abaixo");
 
             }
         }

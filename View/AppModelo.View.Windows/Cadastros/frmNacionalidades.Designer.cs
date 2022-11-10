@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -36,9 +37,11 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,23 +117,29 @@
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAtualizar
             // 
-            this.button1.Location = new System.Drawing.Point(153, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 38);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Atualizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Location = new System.Drawing.Point(153, 271);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(123, 38);
+            this.btnAtualizar.TabIndex = 15;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // button2
+            // btnRemover
             // 
-            this.button2.Location = new System.Drawing.Point(293, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 38);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRemover.Location = new System.Drawing.Point(293, 271);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(123, 38);
+            this.btnRemover.TabIndex = 16;
+            this.btnRemover.Text = "Excluir";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // frmNacionalidades
             // 
@@ -138,8 +147,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(423, 313);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRemover);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalvar);
@@ -151,6 +160,7 @@
             this.Name = "frmNacionalidades";
             this.Text = "Nacionalidades";
             ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +176,8 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chkAtivo;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

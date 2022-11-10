@@ -32,9 +32,10 @@ namespace AppModelo.View.Windows.Cadastros
 
             var resposta = controller.Cadastrar(descricaoMaiuscula, chkAtivo.Checked);
 
-           
+            MessageBox.Show("Naturalidade cadastrada com Sucesso");
         }
 
+              
         private void txtDescricao_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
            //primeira regra nome < que 30 letras
@@ -68,6 +69,31 @@ namespace AppModelo.View.Windows.Cadastros
                         .SetError(txtDescricao, "Campo não pode conter Numerais e nem caracteres especiais!");
                     return;
                 }
+            }
+        }
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+            var listaDeNaturalidades = _naturalidadeController.ObterTodasNaturalidades();
+            gvNaturalidades.DataSource = listaDeNaturalidades;
+
+            MessageBox.Show("Naturalidades Atualizadas com Sucesso");
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            var converter = int.Parse(txtId.Text);
+
+            var removeu = _naturalidadeController.ExcluirNaturalidade(converter);
+            if (removeu)
+            {
+                MessageBox.Show("Naturalidade excluída com sucesso");
+                txtId.Text = String.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Verifique se digitou o nome conforme descrito na lista abaixo");
+
             }
         }
     }
