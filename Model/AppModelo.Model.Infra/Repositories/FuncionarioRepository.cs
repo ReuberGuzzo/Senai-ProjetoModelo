@@ -13,7 +13,7 @@ namespace AppModelo.Model.Infra.Repositories
     {
         public bool Inserir(string nome, DateTime dataDeNascimento, bool sexo, string cpf, int id_nacionalidade, int id_naturalidade, string email, string telefone, string telefone_contato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
         {
-            var sql = $"INSERT INTO funcionarios (nome, dataDeNascimento, sexo,cpf,id_nacionalidade, id_naturalidade, email, telefone, telefone_contato,cep,logradouro, numero, complemento, bairro, municipio, uf) VALUES ('{nome}', '{dataDeNascimento}',{sexo}, '{cpf}',{id_nacionalidade},{id_naturalidade}, '{email}', '{telefone}', '{telefone_contato}', '{cep}', '{logradouro}',{numero}, '{complemento}', '{bairro}','{municipio}', '{uf}')";
+            var sql = $"INSERT INTO funcionarios (nome, data_de_nascimento, sexo,cpf,id_nacionalidade, id_naturalidade, email, telefone, telefone_contato,cep,logradouro, numero, complemento, bairro, municipio, uf) VALUES ('{nome}', '{dataDeNascimento}',{sexo}, '{cpf}',{id_nacionalidade},{id_naturalidade}, '{email}', '{telefone}', '{telefone_contato}', '{cep}', '{logradouro}',{numero}, '{complemento}', '{bairro}','{municipio}', '{uf}')";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
