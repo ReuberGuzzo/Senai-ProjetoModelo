@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using AppModelo.Model.Domain.Entities;
+using Dapper;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,17 @@ namespace AppModelo.Model.Infra.Repositories
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
+        }
+
+        public IEnumerable<FuncionarioEntity> ObterTodos()
+        {
+            var sql = $"SELECT id, nome, data_de_nascimento, sexo, cpf, telefone, logradouro, numero, municipio, bairro FROM funcionarios";
+
+            using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
+
+            var resultado = conexaoBd.Query<FuncionarioEntity>(sql);
+
+            return resultado;
         }
     }
 }
