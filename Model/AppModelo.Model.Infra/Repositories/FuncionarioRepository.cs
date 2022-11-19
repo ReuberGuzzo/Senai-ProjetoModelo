@@ -22,7 +22,7 @@ namespace AppModelo.Model.Infra.Repositories
 
         public IEnumerable<FuncionarioEntity> ObterTodos()
         {
-            var sql = $"SELECT id, nome, data_de_nascimento, sexo, cpf, telefone, logradouro, numero, municipio, bairro FROM funcionarios";
+            var sql = $"SELECT id, nome, data_de_nascimento, cpf, telefone, logradouro, numero, municipio, bairro FROM funcionarios";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 

@@ -34,9 +34,8 @@
             this.nacionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.naturalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvListarFuncionarios = new System.Windows.Forms.DataGridView();
+            this.txtListar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarFuncionarios)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -83,20 +82,18 @@
             // 
             // listarClientesToolStripMenuItem
             // 
+            this.listarClientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtListar});
             this.listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
             this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
             this.listarClientesToolStripMenuItem.Text = "Listar Funcionarios";
-            this.listarClientesToolStripMenuItem.Click += new System.EventHandler(this.listarClientesToolStripMenuItem_Click);
             // 
-            // dgvListarFuncionarios
+            // txtListar
             // 
-            this.dgvListarFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarFuncionarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListarFuncionarios.Location = new System.Drawing.Point(0, 24);
-            this.dgvListarFuncionarios.Name = "dgvListarFuncionarios";
-            this.dgvListarFuncionarios.Size = new System.Drawing.Size(693, 303);
-            this.dgvListarFuncionarios.TabIndex = 3;
-            this.dgvListarFuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarFuncionarios_CellContentClick);
+            this.txtListar.Name = "txtListar";
+            this.txtListar.Size = new System.Drawing.Size(180, 22);
+            this.txtListar.Text = "Listar";
+            this.txtListar.Click += new System.EventHandler(this.txtListar_Click);
             // 
             // frmPrincipal
             // 
@@ -104,14 +101,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(693, 327);
-            this.Controls.Add(this.dgvListarFuncionarios);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.Name = "frmPrincipal";
-            this.Text = "frmPrincipal";
+            this.Text = "Principal";
+            this.TransparencyKey = System.Drawing.Color.Teal;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListarFuncionarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +121,6 @@
         private System.Windows.Forms.ToolStripMenuItem nacionalidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem naturalidadeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarClientesToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dgvListarFuncionarios;
+        private System.Windows.Forms.ToolStripMenuItem txtListar;
     }
 }

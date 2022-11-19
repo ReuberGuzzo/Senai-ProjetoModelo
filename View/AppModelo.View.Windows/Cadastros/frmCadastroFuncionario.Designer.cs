@@ -76,7 +76,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -430,7 +430,7 @@
             // 
             // btnSalvarCadastro
             // 
-            this.btnSalvarCadastro.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSalvarCadastro.BackColor = System.Drawing.Color.PowderBlue;
             this.btnSalvarCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalvarCadastro.Location = new System.Drawing.Point(266, 520);
             this.btnSalvarCadastro.Name = "btnSalvarCadastro";

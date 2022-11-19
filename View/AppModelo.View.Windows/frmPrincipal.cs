@@ -7,14 +7,12 @@ namespace AppModelo.View.Windows
 {
     public partial class frmPrincipal : Form
     {
-        private FuncionarioController _funcionarioController = new FuncionarioController();
+        
         public frmPrincipal()
         {
             InitializeComponent();
 
-            var listaFuncionarios = _funcionarioController.ObterTodosFuncionarios();
-            dgvListarFuncionarios.DataSource = listaFuncionarios;
-
+            
         }
 
         private void funcionariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,11 +38,11 @@ namespace AppModelo.View.Windows
            
         }
 
-        public void listarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+      
+        private void txtListar_Click(object sender, EventArgs e)
         {
-            var ListaFuncionarios = _funcionarioController.ObterTodosFuncionarios();
-            dgvListarFuncionarios.DataSource = ListaFuncionarios;
-                                   
+            var form = new frmListaDeFuncionarios();
+            form.Show();
         }
     }
 }
