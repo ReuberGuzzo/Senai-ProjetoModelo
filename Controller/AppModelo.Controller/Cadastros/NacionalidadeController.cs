@@ -7,6 +7,12 @@ namespace AppModelo.Controller.Cadastros
 {
     public class NacionalidadeController
     {
+        /// <summary>
+        /// Cadastrar - Inseri uma nova Nacionalidade no NacionalidadeRepository.
+        /// </summary>
+        /// <param name="descricao"></param>
+        /// <param name="ativo"></param>
+        /// <returns> Ela inseri a Nacionalidade se  </returns>
         public bool Cadastrar(string descricao, bool ativo)
         {
             var repositorio = new NacionalidadeRepository();
