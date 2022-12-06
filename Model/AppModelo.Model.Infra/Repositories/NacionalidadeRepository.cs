@@ -19,6 +19,12 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
+        /// <summary>
+        /// Busca no banco de dados as informações e atualiza as mesmas sobrepondo o que ja esta salvo
+        /// </summary>
+        /// <param name="descricao"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool Atualizar(string descricao, int id) 
         {
             //string interpolation
@@ -27,6 +33,11 @@ namespace AppModelo.Model.Infra.Repositories
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
         }
+        /// <summary>
+        /// Vai no banco de dados e remove informações que estão salvas
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>retorna na variavel resultado os dados apagados</returns>
         public bool Remover(int id) 
         {
             //string interpolation

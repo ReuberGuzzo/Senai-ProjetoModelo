@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppModelo.Model.Domain.Entities
 {
+    /// <summary>
+    /// O Get pega uma informação do tipo propriedade e Set escreve as informações adquiridas. 
+    /// </summary>
     public class FuncionarioEntity
     {
         public int Id { get; set; }

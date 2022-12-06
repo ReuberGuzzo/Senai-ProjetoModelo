@@ -12,6 +12,26 @@ namespace AppModelo.Model.Infra.Repositories
 {
     public class FuncionarioRepository
     {
+        /// <summary>
+        /// inseri as informações inseridas nos campos da tela no banco de dados para armazenamento.
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="dataDeNascimento"></param>
+        /// <param name="sexo"></param>
+        /// <param name="cpf"></param>
+        /// <param name="id_nacionalidade"></param>
+        /// <param name="id_naturalidade"></param>
+        /// <param name="email"></param>
+        /// <param name="telefone"></param>
+        /// <param name="telefone_contato"></param>
+        /// <param name="cep"></param>
+        /// <param name="logradouro"></param>
+        /// <param name="numero"></param>
+        /// <param name="complemento"></param>
+        /// <param name="bairro"></param>
+        /// <param name="municipio"></param>
+        /// <param name="uf"></param>
+        /// <returns>Retorna essas informações em forma de cadastro no programa</returns>
         public bool Inserir(string nome, DateTime dataDeNascimento, bool sexo, string cpf, int id_nacionalidade, int id_naturalidade, string email, string telefone, string telefone_contato, string cep, string logradouro, int numero, string complemento, string bairro, string municipio, string uf)
         {
             var sql = $"INSERT INTO funcionarios (nome, data_de_nascimento, sexo,cpf,id_nacionalidade, id_naturalidade, email, telefone, telefone_contato,cep,logradouro, numero, complemento, bairro, municipio, uf) VALUES ('{nome}', '{dataDeNascimento}',{sexo}, '{cpf}',{id_nacionalidade},{id_naturalidade}, '{email}', '{telefone}', '{telefone_contato}', '{cep}', '{logradouro}',{numero}, '{complemento}', '{bairro}','{municipio}', '{uf}')";

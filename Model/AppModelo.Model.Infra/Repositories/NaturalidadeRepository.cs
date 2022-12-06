@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Repositories
 {
+
+    
     public class NaturalidadeRepository
     {
         //CRUD - create - read   - update - delete
