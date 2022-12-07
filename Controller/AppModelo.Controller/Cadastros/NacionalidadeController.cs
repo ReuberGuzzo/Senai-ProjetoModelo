@@ -40,10 +40,10 @@ namespace AppModelo.Controller.Cadastros
         /// </summary>
         /// <param name="Id"></param>
         /// <returns>Exclui a Nacionalidade pelo ID</returns>
-        public bool ExcluirNacionalidade(int Id)
+        public bool ExcluirNacionalidade(int Id, string descricao)
         {
             var repositorio = new NacionalidadeRepository();
-            var resposta = repositorio.Remover(Id);
+            var resposta = repositorio.Remover(Id, descricao);
             return resposta;
         }
 

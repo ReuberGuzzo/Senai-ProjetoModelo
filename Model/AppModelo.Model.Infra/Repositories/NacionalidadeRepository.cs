@@ -38,10 +38,10 @@ namespace AppModelo.Model.Infra.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns>retorna na variavel resultado os dados apagados</returns>
-        public bool Remover(int id) 
+        public bool Remover(int id, string descricao) 
         {
             //string interpolation
-            var sql = $"DELETE FROM nacionalidade  WHERE id  = '{id}'";
+            var sql = $"DELETE FROM nacionalidade  WHERE id  = '{id}' AND DESCRICAO = '{descricao}'" ;
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;

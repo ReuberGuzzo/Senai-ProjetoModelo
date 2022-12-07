@@ -57,19 +57,29 @@ namespace AppModelo.View.Windows.Cadastros
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            var converter = int.Parse(txtId.Text);
 
-            var removeu = _nacionalidadeController.ExcluirNacionalidade (converter);
-            if (removeu)
+            try
             {
-                MessageBox.Show("Nacionalidade excluída com sucesso");
-                txtId.Text = string.Empty;
-            }
-            else
-            {
-                MessageBox.Show("Verifique se digitou o que deseja excluir conforme descrito na lista abaixo");
+                var converter = int.Parse(txtId.Text);
 
+                var removeu = _nacionalidadeController.ExcluirNacionalidade(converter,txtDescricao.Text);
+                if (removeu)
+                {
+                    MessageBox.Show("Nacionalidade excluída com sucesso");
+                    txtId.Text = string.Empty;
+                }
+                else
+                {
+                    MessageBox.Show("Verifique se digitou o que deseja excluir conforme descrito na lista abaixo");
+
+                }
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show ("Essa Nacionalidade esta rsendo usada por algum cadastro, favor Verifiar");
+            }
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

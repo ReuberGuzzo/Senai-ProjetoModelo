@@ -92,15 +92,26 @@ namespace AppModelo.View.Windows.Cadastros
         /// <param name="e"></param>
         private void btnSalvarCadastro_Click(object sender, EventArgs e)
         {
-            var funController = new FuncionarioController();
-            var dataNasc = Convert.ToDateTime(txtDataNascimento.Text);
-            int numero = int.Parse(txtEnderecoNumero.Text);
-            var naturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
-            var nacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
+            try
+            {
+                var funController = new FuncionarioController();
+                var dataNasc = Convert.ToDateTime(txtDataNascimento.Text);
+                int numero = int.Parse(txtEnderecoNumero.Text);
+                var naturalidade = Convert.ToInt32(cmbNaturalidade.SelectedValue);
+                var nacionalidade = Convert.ToInt32(cmbNacionalidade.SelectedValue);
 
-            // Recebo os dados do metodo obter para o endereço
-            var salvou = funController.SalvarCadastro(txtNome.Text,dataNasc, rbMasculino.Checked,txtCpf.Text, nacionalidade, naturalidade, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text,numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
-            MessageBox.Show("Salvo com Sucesso!");
+                // Recebo os dados do metodo obter para o endereço
+                var salvou = funController.SalvarCadastro(txtNome.Text, dataNasc, rbMasculino.Checked, txtCpf.Text, nacionalidade, naturalidade, txtEmail.Text, txtTelefone.Text, txtTelefoneContato.Text, txtEnderecoCep.Text, txtEnderecoLogradouro.Text, numero, txtEnderecoComplemento.Text, txtEnderecoBairro.Text, txtEnderecoMunicipio.Text, txtEnderecoUf.Text);
+                MessageBox.Show("Salvo com Sucesso!");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show ("Preencha corretamente os Campos");
+            }
+            
+
+
            LimparForm();
         }
         /// <summary>
